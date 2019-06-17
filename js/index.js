@@ -84,7 +84,7 @@ middleText[4].getElementsByTagName("p")[0].innerHTML = siteContent["main-content
 
 //end middle section
 
-//footer
+//contact
 
 let contactText = document.querySelectorAll(".contact");
 contactText[0].getElementsByTagName("h4")[0].innerHTML = siteContent["contact"]["contact-h4"];
@@ -92,5 +92,10 @@ contactText[0].getElementsByTagName("p")[0].innerHTML = siteContent["contact"]["
 contactText[0].getElementsByTagName("p")[1].innerHTML = siteContent["contact"]["phone"];
 contactText[0].getElementsByTagName("p")[2].innerHTML = siteContent["contact"]["email"];
 
+//end contact section
 
-//end fotter section
+//footer
+
+let footerText = document.getElementsByTagName("footer")[0];
+footerText.getElementsByTagName("p")[0].innerHTML = siteContent["footer"]["copyright"];
+//end footer section
