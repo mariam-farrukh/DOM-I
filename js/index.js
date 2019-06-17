@@ -55,6 +55,9 @@ navLinks.forEach((link, i) => {
 let ctaText = document.getElementsByClassName("cta-text")[0];
 
 ctaText.getElementsByTagName("h1")[0].innerHTML = siteContent["cta"]["h1"];
+let topContent = document.querySelector('.cta-text h1');
+topContent.innerHTML = 'DOM<br> is<br> awesome';
+
 ctaText.getElementsByTagName("button")[0].innerHTML = siteContent["cta"]["button"];
 
 const ctaImg = document.getElementById("cta-img");
@@ -90,6 +93,8 @@ middleText[4].getElementsByTagName("p")[0].innerHTML = siteContent["main-content
 let contactText = document.querySelectorAll(".contact");
 contactText[0].getElementsByTagName("h4")[0].innerHTML = siteContent["contact"]["contact-h4"];
 contactText[0].getElementsByTagName("p")[0].innerHTML = siteContent["contact"]["address"];
+let addressContent = document.querySelector('.contact p');
+addressContent.innerHTML = '123 Way 456 Street<br> Somewhere, USA';
 contactText[0].getElementsByTagName("p")[1].innerHTML = siteContent["contact"]["phone"];
 contactText[0].getElementsByTagName("p")[2].innerHTML = siteContent["contact"]["email"];
 
