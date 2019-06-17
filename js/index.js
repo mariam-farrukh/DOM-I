@@ -59,6 +59,9 @@ let topContent = document.querySelector('.cta-text h1');
 topContent.innerHTML = 'DOM<br> is<br> awesome';
 
 ctaText.getElementsByTagName("button")[0].innerHTML = siteContent["cta"]["button"];
+let ctaButton = document.querySelector('button');
+ctaButton.style.borderRadius = '15px'
+ctaButton.style.backgroundColor = '#D7F9D7'
 
 const ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
