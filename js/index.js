@@ -37,8 +37,8 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
 //Nav
+
 const logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
@@ -46,9 +46,11 @@ let navLinks = document.querySelectorAll("nav a");
 navLinks.forEach((link, i) => {
   link.innerHTML = siteContent.nav[`nav-item-${i + 1}`];
 });
+
 //end Nav
 
 //cta
+
 let ctaText = document.getElementsByClassName("cta-text")[0];
 
 ctaText.getElementsByTagName("h1")[0].innerHTML = siteContent["cta"]["h1"];
@@ -80,6 +82,15 @@ middleText[3].getElementsByTagName("p")[0].innerHTML = siteContent["main-content
 middleText[4].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["vision-h4"];
 middleText[4].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["vision-content"];
 
-//let bottomText = document.getElementsByClassName("main-content")[0];
-
 //end middle section
+
+//footer
+
+let contactText = document.querySelectorAll(".contact");
+contactText[0].getElementsByTagName("h4")[0].innerHTML = siteContent["contact"]["contact-h4"];
+contactText[0].getElementsByTagName("p")[0].innerHTML = siteContent["contact"]["address"];
+contactText[0].getElementsByTagName("p")[1].innerHTML = siteContent["contact"]["phone"];
+contactText[0].getElementsByTagName("p")[2].innerHTML = siteContent["contact"]["email"];
+
+
+//end fotter section
