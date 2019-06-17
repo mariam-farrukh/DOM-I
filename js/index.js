@@ -42,6 +42,7 @@ const siteContent = {
 const logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+let nav = document.querySelector("nav");
 let navLinks = document.querySelectorAll("nav a");
 navLinks.forEach((link, i) => {
   link.innerHTML = siteContent.nav[`nav-item-${i + 1}`];
@@ -98,4 +99,21 @@ contactText[0].getElementsByTagName("p")[2].innerHTML = siteContent["contact"]["
 
 let footerText = document.getElementsByTagName("footer")[0];
 footerText.getElementsByTagName("p")[0].innerHTML = siteContent["footer"]["copyright"];
+
 //end footer section
+
+//Task 3 - Add New Content
+  //Change the color of the navigation text to be green.
+  navLinks.forEach((links,i) => {
+    links.style.color = "green";
+  })
+  //Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
+  let newNavLink1 = document.createElement('a');
+  newNavLink1.innerHTML = 'Our Team';
+  newNavLink1.style.color = 'green';
+  nav.prepend(newNavLink1);
+
+  let newNavLink2 = document.createElement('a');
+  newNavLink2.innerHTML = 'Blog';
+  newNavLink2.style.color = 'green';
+  nav.appendChild(newNavLink2);
