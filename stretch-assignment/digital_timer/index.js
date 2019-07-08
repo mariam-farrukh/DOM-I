@@ -34,7 +34,30 @@ function timer(){
             msTens.textContent = "0";
         }
         else if (ms % 1000 === 0){
-            
+            secondBegin += 1;
+            secondOnes.textContent = secondBegin.toString();
+            msHundreds.textContent = "0";
+            msTens.textContent = "0";
+            msTensBegin = 0;
+            msHundredsBegin = 0;
+        }
+        else if (ms % 100 ===0) {
+            msHundredsBegin += 1;
+            msHundreds.textContent = msHundredsBegin.toString();
+            msTens.textContent = "0";
+            msTensBegin = 0;
+        }
+        else {
+            msTensBegin += 1;
+            msTens.textContent = msTensBegin.toString();
         }
     }
+    function stop(int){
+        clearInterval(int);
+        Array.from(digits.children).forEach(digit => {
+            digit.classList.add("redDigit");
+        })
+    }
+    start();
 }
+timer();
