@@ -96,6 +96,7 @@ middleText[4].getElementsByTagName("p")[0].innerHTML = siteContent["main-content
 let contactText = document.querySelectorAll(".contact");
 contactText[0].getElementsByTagName("h4")[0].innerHTML = siteContent["contact"]["contact-h4"];
 contactText[0].getElementsByTagName("p")[0].innerHTML = siteContent["contact"]["address"];
+
 let addressContent = document.querySelector('.contact p');
 addressContent.innerHTML = '123 Way 456 Street<br> Somewhere, USA';
 contactText[0].getElementsByTagName("p")[1].innerHTML = siteContent["contact"]["phone"];
